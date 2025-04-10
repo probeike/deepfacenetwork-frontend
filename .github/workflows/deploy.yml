@@ -32,6 +32,9 @@ jobs:
       run: npm test
       if: false  # Disabled since we don't have tests yet
       
+    - name: Create .nojekyll file
+      run: touch out/.nojekyll
+      
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:

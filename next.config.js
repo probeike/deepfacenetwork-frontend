@@ -10,7 +10,7 @@ const nextConfig = {
   }),
   // Required for GitHub Pages deployment with Next.js
   basePath: process.env.NODE_ENV === 'production' ? '/deepfacenetwork-frontend' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/deepfacenetwork-frontend/' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/deepfacenetwork-frontend' : '',
 }
 
 module.exports = nextConfig
