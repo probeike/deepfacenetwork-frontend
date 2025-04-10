@@ -1,9 +1,7 @@
-function App() {
+export default function Home() {
   return (
-    <div>
+    <main>
       <h1>Welcome to the Deep Face Network</h1>
-    </div>
+    </main>
   )
 }
-
-export default App

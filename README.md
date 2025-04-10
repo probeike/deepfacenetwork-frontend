@@ -1,50 +1,33 @@
-# Minimal React App
+# DeepFaceNetwork Frontend
 
-A minimal React application created with Vite that displays "Hello, world!".
+A minimal Next.js app with TypeScript using the App Router.
 
-## Project Structure
+## Getting Started
 
-```
-minimal-react-app/
-├── index.html         # HTML entry point
-├── package.json       # Project dependencies and scripts
-├── vite.config.js     # Vite configuration
-└── src/
-    ├── App.jsx        # Main App component
-    └── main.jsx       # React rendering entry point
-```
-
-## Setup
-
-1. Clone the repository
-2. Install dependencies:
+First, install the dependencies:
 
 ```bash
-cd minimal-react-app
 npm install
 ```
 
-## Running the App
-
-Start the development server:
+Then, run the development server:
 
 ```bash
 npm run dev
 ```
 
-This will start the app in development mode. Open the URL shown in the terminal (typically http://localhost:5173) to view it in your browser.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Building for Production
+## Project Structure
 
-Build the app for production:
+- `app/` - Contains the App Router components
+  - `layout.tsx` - Root layout component
+  - `page.tsx` - Homepage component
+- `next.config.js` - Next.js configuration
+- `tsconfig.json` - TypeScript configuration
+- `package.json` - Project dependencies and scripts
+- `.github/workflows/deploy.yml` - GitHub Actions workflow for deployment
 
-```bash
-npm run build
-```
+## Deployment
 
-This will create a `dist` folder with the production build.
-
-To preview the production build locally:
-
-```bash
-npm run preview
+This project is configured for deployment to GitHub Pages using GitHub Actions. When you push to the main branch, the workflow will automatically build and deploy the app to the gh-pages branch.
