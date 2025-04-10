@@ -1,6 +1,6 @@
 # DeepFaceNetwork Frontend
 
-A minimal Next.js app with TypeScript using the App Router.
+A planetary exploration LLM project on AWS
 
 ## Getting Started
 
