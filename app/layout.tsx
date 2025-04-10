@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Next.js App',
-  description: 'A minimal Next.js app with TypeScript',
+  title: 'Deepface Network',
+  description: 'The deepface planetary exploration network',
 }
 
 export default function RootLayout({
