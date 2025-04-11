@@ -29,7 +29,7 @@ export default function RetroChatBox() {
   return (
     <div
       className={`fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ease-in-out
-        ${isExpanded ? 'w-96 h-96' : 'w-80 h-64'}`}
+        ${isExpanded ? 'w-[768px] h-[768px]' : 'w-80 h-64'}`}
     >
       {/* Chat container with retro styling */}
       <div className="w-full h-full flex flex-col rounded-lg overflow-hidden relative
