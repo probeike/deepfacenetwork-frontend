@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 
+// Check if we're deploying to a custom domain
+const isCustomDomain = process.env.DEPLOY_TARGET === 'custom_domain';
+
 // For production build (GitHub Pages deployment)
-const productionConfig = {
+const githubPagesConfig = {
   output: 'export',
   distDir: 'out',
   images: {
@@ -12,6 +15,17 @@ const productionConfig = {
   assetPrefix: '/deepfacenetwork-frontend/',
 };
 
+// For custom domain deployment (e.g., deepfacenetwork.com)
+const customDomainConfig = {
+  output: 'export',
+  distDir: 'out',
+  images: {
+    unoptimized: true,
+  },
+  trailingSlash: true,
+  // No basePath or assetPrefix for custom domain
+};
+
 // For local development and testing
 const developmentConfig = {
   // No static export for development
@@ -20,11 +34,16 @@ const developmentConfig = {
   },
 };
 
-// Use development config for local testing, production config otherwise
-// Set NODE_ENV=production explicitly when building for production
+// Determine which config to use
 const isProduction = process.env.NODE_ENV === 'production';
-console.log(`Using ${isProduction ? 'production' : 'development'} config`);
+let nextConfig;
 
-const nextConfig = isProduction ? productionConfig : developmentConfig;
+if (isProduction) {
+  nextConfig = isCustomDomain ? customDomainConfig : githubPagesConfig;
+  console.log(`Using production config for ${isCustomDomain ? 'custom domain' : 'GitHub Pages'}`);
+} else {
+  nextConfig = developmentConfig;
+  console.log('Using development config');
+}
 
 module.exports = nextConfig;

@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:github": "NODE_ENV=production npm run build",
+    "build:custom": "NODE_ENV=production DEPLOY_TARGET=custom_domain npm run build",
+    "serve:github": "node server.js",
+    "serve:custom": "DEPLOY_TARGET=custom_domain node server.js"
   },
   "dependencies": {
     "next": "14.1.0",
