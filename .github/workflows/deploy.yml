@@ -35,8 +35,8 @@ jobs:
       - name: Build
         run: |
           # Set NODE_ENV to production for static export
-          # For GitHub Pages deployment, we don't set DEPLOY_TARGET=custom_domain
-          NODE_ENV=production npm run build
+          # Set USE_CUSTOM_DOMAIN=true since we're using a custom domain with GitHub Pages
+          NODE_ENV=production USE_CUSTOM_DOMAIN=true npm run build
           # Ensure .nojekyll file exists to prevent GitHub Pages from ignoring files that start with an underscore
           touch out/.nojekyll
       

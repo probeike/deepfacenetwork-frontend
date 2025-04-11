@@ -2,26 +2,26 @@
 
 ## Deployment Options
 
-This project supports two deployment scenarios:
+This project supports two GitHub Pages deployment scenarios:
 
-### 1. GitHub Pages Deployment
+### 1. GitHub Pages without Custom Domain
 
-For deployment to GitHub Pages (at username.github.io/deepfacenetwork-frontend):
+For deployment to GitHub Pages without a custom domain (at username.github.io/deepfacenetwork-frontend):
 
 ```bash
-# Build for GitHub Pages
+# Build for GitHub Pages without custom domain
 npm run build:github
 
 # Test locally (will serve at /deepfacenetwork-frontend path)
 npm run serve:github
 ```
 
-### 2. Custom Domain Deployment
+### 2. GitHub Pages with Custom Domain
 
-For deployment to a custom domain (e.g., deepfacenetwork.com):
+For deployment to GitHub Pages with a custom domain (e.g., deepfacenetwork.com):
 
 ```bash
-# Build for custom domain
+# Build for GitHub Pages with custom domain
 npm run build:custom
 
 # Test locally (will serve at root path /)
@@ -33,8 +33,8 @@ npm run serve:custom
 If you encounter 404 errors when loading stylesheets or other assets:
 
 1. Make sure you're using the correct deployment configuration for your target environment
-2. For GitHub Pages, assets should be served from the `/deepfacenetwork-frontend` path
-3. For custom domains, assets should be served from the root path
+2. For GitHub Pages without a custom domain, assets should be served from the `/deepfacenetwork-frontend` path
+3. For GitHub Pages with a custom domain, assets should be served from the root path
 
 ## Development
 
